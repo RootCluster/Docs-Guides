@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "文档手册",
+    "description": "The title in the navbar"
+  },
+  "item.label.Tutorial": {
+    "message": "教程",
+    "description": "Navbar item with label 日誌序"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Navbar item with label 2021 年"
+  }
+}
