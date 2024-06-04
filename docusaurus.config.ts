@@ -29,7 +29,11 @@ const config: Config = {
     locales: ['en','zh-Hans'],
   },
 
-  themes: [
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid',
     // ... Your other themes.
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -167,6 +171,8 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
+
   } satisfies Preset.ThemeConfig,
 };
 
