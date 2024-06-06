@@ -18,7 +18,7 @@ const config: Config = {
   // organizationName: 'facebook', // Usually your GitHub org/user name.
   // projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  // onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -57,8 +57,8 @@ const config: Config = {
         docs: {
           // https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-docs
           sidebarPath: './sidebars.ts',
-          path: "docs",
-          routeBasePath: "/",
+          // path: "docs",
+          // routeBasePath: "/",
         },
         blog: {
           // https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-blog
@@ -90,7 +90,7 @@ const config: Config = {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
         srcDark: 'img/logo_dark.svg',
-        href: '/intro'
+        href: '/docs/intro'
       },
       items: [
         {
@@ -108,12 +108,6 @@ const config: Config = {
           type: 'docsVersionDropdown',
           position: 'right',
           dropdownActiveClassDisabled: true,
-          dropdownItemsAfter: [
-            {
-              to: '/versions',
-              label: 'All versions',
-            },
-          ],
         },
         // language change
         {
