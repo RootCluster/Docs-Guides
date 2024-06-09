@@ -1,31 +1,29 @@
 ---
 sidebar_position: 1
+title: 版本管理
 ---
 
-# Manage Docs Versions
+Docusaurus 可以管理文档的多个版本.
 
-Docusaurus can manage multiple versions of your docs.
+## 创建版本
 
-## Create a docs version
+发布项目的 1.0 版本
 
-Release a version 1.0 of your project:
-
-```bash
+```bash npm2yarn
+# 将 `docs` 文件夹复制到 `versioned_docs/version-1.0` 并创建 `versions.json`
 npm run docusaurus docs:version 1.0
 ```
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
+你的 docs 现在有 2 个版本:
 
-Your docs now have 2 versions:
+- `1.0`: `http://localhost:3000/docs/` 对于版本 1.0 docs
+- `current`: `http://localhost:3000/docs/next/` 对于 **即将发布的未发布 docs**
 
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
+## 添加版本下拉
 
-## Add a Version Dropdown
+为了夸版本无缝导航，要添加一个版本下来列表
 
-To navigate seamlessly across versions, add a version dropdown.
-
-Modify the `docusaurus.config.js` file:
+修改 `docusaurus.config.js` 文件:
 
 ```js title="docusaurus.config.js"
 export default {
@@ -43,13 +41,13 @@ export default {
 };
 ```
 
-The docs version dropdown appears in your navbar:
+docs 版本下拉列表出现在导航栏中:
 
 ![Docs Version Dropdown](./img/docsVersionDropdown.png)
 
-## Update an existing version
+## 更新现有版本
 
-It is possible to edit versioned docs in their respective folder:
+可以在各自的文件夹中编辑版本化的 docs:
 
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+- 1.0: `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
+- 当前版本: `docs/hello.md` updates `http://localhost:3000/docs/next/hello`

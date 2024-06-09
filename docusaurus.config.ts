@@ -8,17 +8,17 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docusaurus.incoder.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: 'guide/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   // organizationName: 'facebook', // Usually your GitHub org/user name.
   // projectName: 'docusaurus', // Usually your repo name.
 
-  // onBrokenLinks: 'throw',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -59,6 +59,9 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // path: "docs",
           // routeBasePath: "/",
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
+          ],
         },
         blog: {
           // https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-blog
@@ -89,8 +92,8 @@ const config: Config = {
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
-        srcDark: 'img/logo_dark.svg',
-        href: '/docs/intro'
+        srcDark: 'img/logo.svg',
+        href: '/'
       },
       items: [
         {
@@ -128,40 +131,22 @@ const config: Config = {
       //       },
       //     ],
       //   },
-      //   {
-      //     title: 'Community',
-      //     items: [
-      //       {
-      //         label: 'Stack Overflow',
-      //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //       },
-      //       {
-      //         label: 'Discord',
-      //         href: 'https://discordapp.com/invite/docusaurus',
-      //       },
-      //       {
-      //         label: 'Twitter',
-      //         href: 'https://twitter.com/docusaurus',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'More',
-      //     items: [
-      //       {
-      //         label: 'Blog',
-      //         to: '/blog',
-      //       },
-      //       {
-      //         label: 'GitHub',
-      //         href: 'https://github.com/facebook/docusaurus',
-      //       },
-      //     ],
-      //   },
       // ],
       copyright: `Copyright © ${new Date().getFullYear()} Docs Guides, Inc. Built with Docusaurus.`,
     },
+
+
+    // announcementBar: {
+    //   id: `announcementBar-v1`,
+    //   // content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter ${TwitterSvg}</a>`,
+    //   content: `🎉️ <b><a target="_blank" ">Docusaurus </a> is out!</b> 🥳️`,
+    // },
     prism: {
+      // additionalLanguages: [
+      //   'java',
+      //   'bash',
+      //   'diff'
+      // ],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },

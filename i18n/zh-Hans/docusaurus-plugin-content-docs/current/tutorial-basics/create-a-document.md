@@ -1,57 +1,54 @@
 ---
 sidebar_position: 2
+title: 创建 Docs
 ---
 
-# Create a Document
+:::info
+创建 docs 文章路径(如:这里的 create-a-document.md): `docs/create-a-document.md`
+> docs 相关文章必须放在 `docs` 目录下
+:::
 
-Documents are **groups of pages** connected through:
+## 文档头信息
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
-
-## Create your first Doc
-
-Create a Markdown file at `docs/hello.md`:
-
-```md title="docs/hello.md"
-# Hello
-
-This is my **first Docusaurus document**!
-```
-
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
-
-## Configure the Sidebar
-
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
+```md
 ---
-sidebar_label: 'Hi!'
+# 文档唯一 id
+id: doc-markdown
+# 文档标题
+title: Docs Markdown Features
+# 是否隐藏文档顶部的标题
+hide_title: false
+# 是否向右隐藏目录
+hide_table_of_contents: false
+# 文档侧边栏中显示的文本
+sidebar_label: Markdown
+# 使用自动生成的侧边栏项时，控制文档在生成的侧边栏切片中的位置
 sidebar_position: 3
+# 文档中使用的文本此文档的 下一个/上一个 按钮
+pagination_label: Markdown features
+# 编辑此文档的URL
+custom_edit_url: https://github.com/facebook/docusaurus/edit/main/docs/api-doc-markdown.md
+# 您的文档的描述，它将成为<head>中的<meta name="description"content="…"/>和<meta properties="og： description"content="…"/>，供搜索引擎使用
+description: How do I find you when I cannot solve this problem
+# 用于搜索引擎优化的文档关键词元标签
+keywords:
+  - docs
+  - docusaurus
+# 要标记到文档的两个字符串字段label和permalink的字符串或对象列表
+tags: [docusaurus]
+# 将用作<head>中<meta properties="og： image"content="…"/>的封面或缩略图，增强社交媒体和消息传递平台上的链接预览
+image: https://i.imgur.com/mErPwqL.png
+# 文件路径
+slug: /myDoc
+# 最后更新
+last_update:
+  date: 1/1/2000
+  author: custom author name
 ---
 
-# Hello
+# Markdown Features
 
-This is my **first Docusaurus document**!
+My Document Markdown content
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
-
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
-```
+更多信息 [Markdown front matter](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter)

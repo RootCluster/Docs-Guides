@@ -1,18 +1,16 @@
 ---
 sidebar_position: 1
+title: 创建 Pages
 ---
 
-# Create a Page
+:::info
+创建 pages 文章路径(如:这里的 2024-06-06-docs.md): `src/pages/markdown-page.md`
+> pages 相关文章必须放在 `src/pages` 目录下
+:::
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+## React Page
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
+在 `src/pages/` 创建文件 `my-react-page.js`
 
 ```jsx title="src/pages/my-react-page.js"
 import React from 'react';
@@ -28,16 +26,12 @@ export default function MyReactPage() {
 }
 ```
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+## Markdown Page
 
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
+在 `src/pages/` 创建文件 `my-markdown-page.md`
 
 ```mdx title="src/pages/my-markdown-page.md"
 # My Markdown page
 
 This is a Markdown page
 ```
-
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).

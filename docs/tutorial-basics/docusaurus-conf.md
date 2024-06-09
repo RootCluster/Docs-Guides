@@ -1,0 +1,96 @@
+---
+sidebar_position: 0
+title: 相关配置
+---
+
+## 项目配置调整
+
+```ts showLineNumbers title="docusaurus.config.ts"
+const config: Config = {
+  title: 'Docs-Guides',
+  tagline: 'Docs Demo',
+  // 网站 ico 图标
+  favicon: 'img/favicon.ico',
+  // 项目的最终访问地址
+  url: ''
+  // 项目子路径，按需配置
+  // 如果不存在子目录，这里配置为 '/'，因此最终访问地址为 https://domain-name
+  // 本项目示例子目录 'guide/'，因此最终访问地址为 https://domain-name/guide/
+  baseUrl: 'guide/'
+  themeConfig: {
+      navbar: {
+        // 左上角导航名字
+        title: 'Docs Guides',
+        logo: {
+          // logo 描述
+          alt: 'My Site Logo',
+          // 默认主题 logo
+          src: 'img/logo.svg',
+          // dark 主题 logo
+          srcDark: 'img/logo_dark.svg',
+          // 指定开始页（定位到 docs 目录下的 intro 文件）
+          href: '/docs/intro'
+        },
+        ....
+      }
+  }
+}
+```
+
+其他更多相关 docusaurus.config.ts 配置可查看 [docusaurus.config.js](https://docusaurus.io/zh-CN/docs/api/docusaurus-config) 文档
+
+## 侧边栏配置
+
+关于侧边栏有两种方式，一种是手动配置，另一种是根据 docs 下文件夹名称自动生成
+
+```ts showLineNumbers title="sidebars.ts"
+export default {
+  tutorialSidebar: [
+    'intro',
+    // highlight-next-line
+    'hello',
+    {
+      type: 'category',
+      label: 'Tutorial',
+      items: ['tutorial-basics/create-a-document'],
+    },
+  ],
+};
+```
+
+## 主题色
+
+可通过 [Infima](https://docusaurus.io/zh-CN/docs/styling-layout#styling-your-site-with-infima) 进行生成主题色
+
+```css title="src/css/custom.css"
+/* 默认颜色. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* dark 模式颜色. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+```
+
+import Zoom from 'react-medium-image-zoom';
+
+<Zoom>
+![docusaurus](../../static/img/undraw_docusaurus_tree.svg)
+</Zoom>
