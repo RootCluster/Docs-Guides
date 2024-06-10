@@ -142,11 +142,11 @@ const config: Config = {
     //   content: `🎉️ <b><a target="_blank" ">Docusaurus </a> is out!</b> 🥳️`,
     // },
     prism: {
-      // additionalLanguages: [
-      //   'java',
-      //   'bash',
-      //   'diff'
-      // ],
+      additionalLanguages: [
+        'java',
+        'bash',
+        'diff'
+      ],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
