@@ -1,0 +1,427 @@
+---
+sidebar_position: 3
+title: Markdown Features
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Zoom from 'react-medium-image-zoom';
+
+:::tip
+Only some commonly used Markdown examples are shown here. If you need more, please refer to [official document](https://docusaurus.io/zh-CN/docs/markdown-features)
+:::
+
+## [Front Matter](https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-pages)
+
+```text title="my-doc.md"
+// highlight-start
+---
+# Unique identifier
+id: my-doc-id
+# Article Title
+title: My document title
+# Article description
+description: My document description
+# File path
+slug: /my-custom-url
+---
+// highlight-end
+
+## Markdown heading
+
+Markdown text with [links](./hello.md)
+```
+
+More title page parameter configurations can be referred to [plugin-content-pages](https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-pages#markdown-front-matter)
+
+## [Links](https://docusaurus.io/zh-CN/docs/markdown-features/links)
+
+### Anchor point
+
+<Tabs>
+  <TabItem value="notes" label="Anchor point" default>
+  ````md
+  First citation[^1], Second citation[^2]
+
+
+  [^1]: citation1
+  [^2]: citation2
+  ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+  First citation[^1], Second citation[^2]
+
+
+  [^1]: citation1
+  [^2]: citation2
+  </TabItem>
+</Tabs>
+
+### External links
+
+<Tabs>
+  <TabItem value="notes" label="External links" default>
+  ````md
+  - [我的博客](https://incoder.org)
+  - [我的应用](https://incoder.app)
+  ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+  - [我的博客](https://incoder.org)
+  - [我的应用](https://incoder.app)
+  </TabItem>
+</Tabs>
+
+### Internal links
+
+<Tabs>
+  <TabItem value="notes" label="Internal links" default>
+  ````md
+  - [创建 Pages](../create-a-page.md)
+  - [创建 Docs](../create-a-document.md)
+  ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+  - [创建 Pages](../create-a-page.md)
+  - [创建 Docs](../create-a-document.md)
+  </TabItem>
+</Tabs>
+
+## [Resources](https://docusaurus.io/zh-CN/docs/markdown-features/assets)
+
+### Picture Zoom
+
+<Tabs>
+  <TabItem value="mdx" label=".mdx file" default>
+      ````md
+      <!-- 文章开始引出插件 -->
+      ```mdx-code-block
+      import Zoom from 'react-medium-image-zoom';
+      ```
+
+      <!-- 文章内容处引入可缩放图片 -->
+      <Zoom>
+      ![docusaurus](../../static/img/undraw_docusaurus_mountain.svg)
+      </Zoom>
+      ````
+  </TabItem>
+  <TabItem value="md" label=".md file">
+      ````md
+      # 文章开始引出插件
+      import Zoom from 'react-medium-image-zoom';
+        
+      # 文章内容处引入可缩放图片
+      <Zoom>
+      ![docusaurus](undraw_docusaurus_mountain.svg)
+      </Zoom>
+      ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+    <Zoom>
+    ![docusaurus](undraw_docusaurus_mountain.svg)
+    </Zoom>
+  </TabItem>
+</Tabs>
+
+## [Code Block](https://docusaurus.io/zh-CN/docs/markdown-features/code-blocks)
+
+Syntax highlighting supports Markdown code blocks
+
+<Tabs>
+  <TabItem value="jsx" label="Highlight code" default>
+  ````md
+  ```jsx title="src/components/HelloDocusaurus.js"
+  function HelloDocusaurus() {
+    return <h1>Hello, Docusaurus!</h1>;
+  }
+  ```
+  ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+  ```jsx title="src/components/HelloDocusaurus.js"
+  function HelloDocusaurus() {
+    return <h1>Hello, Docusaurus!</h1>;
+  }
+  ```
+  </TabItem>
+</Tabs>
+
+## [Admonitions](https://docusaurus.io/zh-CN/docs/markdown-features/admonitions)
+
+Docusaurus has a special syntax to create warnings and annotations.
+
+<Tabs>
+  <TabItem value="admonitions" label="Admonitions" default>
+  ```md
+  # 这里是备注
+  :::note
+
+  This is some note
+  
+  :::
+
+  # 这里是提示
+  :::tip My tip
+  
+  Use this awesome feature option
+  
+  :::
+
+  # 这里是信息
+  :::info
+  
+  This is some info
+  
+  :::
+
+  # 这里是警告
+  :::warning
+  
+  This is some warning
+  
+  :::
+  
+  # 这里是危险
+  :::danger Take care
+
+  This action is dangerous
+
+  :::
+  ```
+  </TabItem>
+  <TabItem value="preview" label="预览">
+  :::note
+
+  This is some note
+
+  :::
+
+  :::tip My tip
+
+  Use this awesome feature option
+
+  :::
+  
+  :::info My info
+
+  This is some info
+
+  :::
+
+  :::warning
+
+  This is some warning
+
+  :::
+
+  :::danger
+
+  This action is dangerous
+
+  :::
+  </TabItem>
+</Tabs>
+
+## Tabs
+
+<Tabs>
+  <TabItem value="tabs" label="Tabs" default>
+    ````md
+    ```jsx
+    import Tabs from '@theme/Tabs';
+    import TabItem from '@theme/TabItem';
+
+    <Tabs>
+      <TabItem value="apple" label="Apple" default>
+        This is an apple 🍎
+      </TabItem>
+      <TabItem value="orange" label="Orange">
+        This is an orange 🍊
+      </TabItem>
+      <TabItem value="banana" label="Banana">
+        This is a banana 🍌
+      </TabItem>
+    </Tabs>
+    ```
+    ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+    <Tabs>
+      <TabItem value="apple" label="Apple" default>
+        This is an apple 🍎
+      </TabItem>
+      <TabItem value="orange" label="Orange">
+        This is an orange 🍊
+      </TabItem>
+      <TabItem value="banana" label="Banana">
+        This is a banana 🍌
+      </TabItem>
+    </Tabs>
+  </TabItem>
+</Tabs>
+
+## Fold
+
+<Tabs>
+  <TabItem value="flowchart" label="Fold" default>
+    ````md
+    <details>
+      <summary><code>Fold: </code>This is a foldable title </summary>
+
+    Here is the content, supporting Markdown, and the following is a `Tab` tab.
+
+    <Tabs>
+      <TabItem value="apple" label="Apple" default>
+        This is an apple 🍎
+      </TabItem>
+      <TabItem value="orange" label="Orange">
+        This is an orange 🍊
+      </TabItem>
+      <TabItem value="banana" label="Banana">
+        This is a banana 🍌
+      </TabItem>
+    </Tabs>
+
+    </details>
+    ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+    <details>
+      <summary><code>Fold: </code>This is a foldable title </summary>
+
+    Here is the content, supporting Markdown, and the following is a `Tab` tab.
+
+    <Tabs>
+      <TabItem value="apple" label="Apple" default>
+        This is an apple 🍎
+      </TabItem>
+      <TabItem value="orange" label="Orange">
+        This is an orange 🍊
+      </TabItem>
+      <TabItem value="banana" label="Banana">
+        This is a banana 🍌
+      </TabItem>
+    </Tabs>
+
+    </details>
+  </TabItem>
+</Tabs>
+
+## MDX and React Components
+
+[MDX](https://mdxjs.com/) It can make your file retention more interactive and allow the use of any **React** component in **Markdown**
+
+<Tabs>
+  <TabItem value="react" label="MDX React Components" default>
+    ````mdx
+    ```jsx
+    export const Highlight = ({children, color}) => (
+      <span
+        style={{
+          backgroundColor: color,
+          borderRadius: '20px',
+          color: '#fff',
+          padding: '10px',
+          cursor: 'pointer',
+        }}
+        onClick={() => {
+          alert(`You clicked the color ${color} with label ${children}`)
+        }}>
+        {children}
+      </span>
+    );
+
+    This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+    This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+    ```
+    ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`);
+    }}>
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+  </TabItem>
+</Tabs>
+
+## [Mermaid](https://docusaurus.io/zh-CN/docs/markdown-features/diagrams)
+
+### Flowchart
+
+<Tabs>
+  <TabItem value="flowchart" label="Flowchart" default>
+    ````md
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+    ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+  </TabItem>
+</Tabs>
+
+### Sequence diagram
+
+<Tabs>
+  <TabItem value="sequence" label="Sequence diagram" default>
+    ````md
+    ```mermaid
+    sequenceDiagram
+        participant Alice
+        participant Bob
+        Alice->>John: Hello John, how are you?
+        loop HealthCheck
+            John->>John: Fight against hypochondria
+        end
+        Note right of John: Rational thoughts <br/>prevail!
+        John-->>Alice: Great!
+        John->>Bob: How about you?
+        Bob-->>John: Jolly good!
+    ```
+    ````
+  </TabItem>
+  <TabItem value="preview" label="Preview">
+    ```mermaid
+    sequenceDiagram
+        participant Alice
+        participant Bob
+        Alice->>John: Hello John, how are you?
+        loop HealthCheck
+            John->>John: Fight against hypochondria
+        end
+        Note right of John: Rational thoughts <br/>prevail!
+        John-->>Alice: Great!
+        John->>Bob: How about you?
+        Bob-->>John: Jolly good!
+    ```
+  </TabItem>
+</Tabs>
+
+For More Diagrams, Please Refer To [Mermaid](https://mermaid.js.org/intro/)

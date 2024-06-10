@@ -7,12 +7,12 @@
     "message": "教程 - 基础",
     "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
-    "message": "5 minutes to learn the most important Docusaurus concepts.",
-    "description": "The generated-index page description for category Tutorial - Basics in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Tutorial - Extras": {
     "message": "教程 - 扩展",
     "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Extras.link.generated-index.description": {
+    "message": "这里是动态生成，只能在 description 中简单的说明，也不支持 markdown 写法",
+    "description": "The generated-index page description for category Tutorial - Extras in sidebar tutorialSidebar"
   }
 }

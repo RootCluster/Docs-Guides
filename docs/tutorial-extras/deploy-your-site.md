@@ -1,8 +1,7 @@
 ---
 sidebar_position: 5
+title: Build and Push
 ---
-
-# Deploy your site
 
 Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
 
@@ -12,17 +11,17 @@ It builds your site as simple **static HTML, JavaScript and CSS files**.
 
 Build your site **for production**:
 
-```bash
-npm run build
+```bash npm2yarn
+yarn build
 ```
 
 The static files are generated in the `build` folder.
 
-## Deploy your site
+## Deploy
 
 Test your production build locally:
 
-```bash
+```bash npm2yarn
 npm run serve
 ```
 

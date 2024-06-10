@@ -13,14 +13,16 @@ import Zoom from 'react-medium-image-zoom';
 
 ## [扉页](https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-pages)
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
-
 ```text title="my-doc.md"
 // highlight-start
 ---
+# 唯一标识
 id: my-doc-id
+# 文章标题
 title: My document title
+# 文章描述
 description: My document description
+# 文件路径
 slug: /my-custom-url
 ---
 // highlight-end
@@ -75,13 +77,13 @@ Markdown text with [links](./hello.md)
 <Tabs>
   <TabItem value="notes" label="外部链接" default>
   ````md
-  - [创建 Pages](create-a-page.md)
-  - [创建 Docs](create-a-document.md)
+  - [创建 Pages](../create-a-page.md)
+  - [创建 Docs](../create-a-document.md)
   ````
   </TabItem>
   <TabItem value="preview" label="预览">
-  - [创建 Pages](create-a-page.md)
-  - [创建 Docs](create-a-document.md)
+  - [创建 Pages](../create-a-page.md)
+  - [创建 Docs](../create-a-document.md)
   </TabItem>
 </Tabs>
 
@@ -99,7 +101,7 @@ Markdown text with [links](./hello.md)
 
       <!-- 文章内容处引入可缩放图片 -->
       <Zoom>
-      ![docusaurus](../../../../static/img/undraw_docusaurus_mountain.svg)
+      ![docusaurus](../../static/img/undraw_docusaurus_mountain.svg)
       </Zoom>
       ````
   </TabItem>
@@ -110,13 +112,13 @@ Markdown text with [links](./hello.md)
         
       # 文章内容处引入可缩放图片
       <Zoom>
-      ![docusaurus](../../../../static/img/undraw_docusaurus_mountain.svg)
+      ![docusaurus](undraw_docusaurus_mountain.svg)
       </Zoom>
       ````
   </TabItem>
   <TabItem value="preview" label="预览">
     <Zoom>
-    ![docusaurus](../../../../../static/img/undraw_docusaurus_mountain.svg)
+    ![docusaurus](undraw_docusaurus_mountain.svg)
     </Zoom>
   </TabItem>
 </Tabs>

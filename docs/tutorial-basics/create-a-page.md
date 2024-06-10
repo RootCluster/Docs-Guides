@@ -1,18 +1,16 @@
 ---
 sidebar_position: 1
+title: Create a Pages
 ---
 
-# Create a Page
+:::info
+Create pages article path(eg: 2024-06-06-docs.md): `src/pages/markdown-page.md`
+> pages related articles must be placed in the 'src/pages' directory
+:::
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+## React Page
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
+In `src/pages/` create file `my-react-page.js`
 
 ```jsx title="src/pages/my-react-page.js"
 import React from 'react';
@@ -28,16 +26,12 @@ export default function MyReactPage() {
 }
 ```
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+## Markdown Page
 
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
+In `src/pages/` create file `my-markdown-page.md`
 
 ```mdx title="src/pages/my-markdown-page.md"
 # My Markdown page
 
 This is a Markdown page
 ```
-
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).

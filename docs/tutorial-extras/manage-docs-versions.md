@@ -1,31 +1,29 @@
 ---
 sidebar_position: 1
+title: Version Manage
 ---
 
-# Manage Docs Versions
+Docusaurus can manage multiple versions of documents.
 
-Docusaurus can manage multiple versions of your docs.
+## Create Version
 
-## Create a docs version
+Release version 1.0 of the project
 
-Release a version 1.0 of your project:
-
-```bash
+```bash npm2yarn
+# 将 `docs` 文件夹复制到 `versioned_docs/version-1.0` 并创建 `versions.json`
 npm run docusaurus docs:version 1.0
 ```
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
+Your docs now has 2 versions.:
 
-Your docs now have 2 versions:
+- `1.0`: `http://localhost:3000/docs/` For version 1.0 docs
+- `current`: `http://localhost:3000/docs/next/` For **upcoming unreleased docs**
 
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
+## Add version drop down
 
-## Add a Version Dropdown
+To kua version seamless navigation, add a version down to the list
 
-To navigate seamlessly across versions, add a version dropdown.
-
-Modify the `docusaurus.config.js` file:
+Modify `docusaurus.config.js` file:
 
 ```js title="docusaurus.config.js"
 export default {
@@ -43,13 +41,13 @@ export default {
 };
 ```
 
-The docs version dropdown appears in your navbar:
+docs version drop-down list appears in the navigation bar:
 
 ![Docs Version Dropdown](./img/docsVersionDropdown.png)
 
-## Update an existing version
+## Update existing version
 
-It is possible to edit versioned docs in their respective folder:
+You can edit the versioned docs in their respective folders:
 
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+- 1.0: `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
+- current version: `docs/hello.md` updates `http://localhost:3000/docs/next/hello`

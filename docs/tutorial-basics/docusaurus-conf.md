@@ -1,9 +1,9 @@
 ---
 sidebar_position: 0
-title: 相关配置
+title: Docusaurus config
 ---
 
-## 项目配置调整
+## Project config adjustment
 
 ```ts showLineNumbers title="docusaurus.config.ts"
 const config: Config = {
@@ -27,9 +27,11 @@ const config: Config = {
           // 默认主题 logo
           src: 'img/logo.svg',
           // dark 主题 logo
-          srcDark: 'img/logo_dark.svg',
+          srcDark: 'img/logo.svg',
           // 指定开始页（定位到 docs 目录下的 intro 文件）
-          href: '/docs/intro'
+          // 如果指定 logo 跳转到指定 docs 目录(没有主页，很适合作为文档风格)，则配置 '/docs/intro'，
+          // 默认是该网站的首页 '/'
+          href: '/'
         },
         ....
       }
@@ -37,11 +39,13 @@ const config: Config = {
 }
 ```
 
-其他更多相关 docusaurus.config.ts 配置可查看 [docusaurus.config.js](https://docusaurus.io/zh-CN/docs/api/docusaurus-config) 文档
+More related docusaurus.config.ts configurations are available [docusaurus.config.js](https://docusaurus.io/zh-CN/docs/api/docusaurus-config)
 
-## 侧边栏配置
+## Sidebar Config
 
-关于侧边栏有两种方式，一种是手动配置，另一种是根据 docs 下文件夹名称自动生成
+There are two ways to sidebar, one is manual configuration, and the other is automatically generated according to the folder name under docs.
+
+### Manual config
 
 ```ts showLineNumbers title="sidebars.ts"
 export default {
@@ -58,9 +62,11 @@ export default {
 };
 ```
 
-## 主题色
+### Automatic generation
 
-可通过 [Infima](https://docusaurus.io/zh-CN/docs/styling-layout#styling-your-site-with-infima) 进行生成主题色
+## Theme color
+
+Available by [Infima](https://docusaurus.io/zh-CN/docs/styling-layout#styling-your-site-with-infima) generate theme colors
 
 ```css title="src/css/custom.css"
 /* 默认颜色. */
@@ -89,8 +95,45 @@ export default {
 }
 ```
 
+## Code snippet
+
+:::info
+
+- Docusaurus: [Default supported highlighted languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23)
+- Prism: [Configurable support language](https://prismjs.com/#supported-languages)
+
+:::
+
+The following shows the language configuration that Docusaurus does not support by default.
+
+```ts title="docusaurus.config.ts"
+const config: Config = {
+  themeConfig: {
+    prism: {
+      // highlight-start
+      additionalLanguages: [
+        'java',
+        'bash',
+        'json'
+      ],
+      // highlight-end
+    }
+  }
+}
+```
+
+> In 3.4.0 Version, [Due to jiti version issues](https://github.com/facebook/docusaurus/issues/10199#issuecomment-2149368485)，Add languages not supported by Docusaurus，It does not take effect. The version of `jiti` can be mandatory.
+>
+> ```json title="package.json"
+>   "resolutions": {
+>     "jiti": "1.21.0"
+>   },
+> ```
+
+## .md Example Zoom
+
 import Zoom from 'react-medium-image-zoom';
 
 <Zoom>
-![docusaurus](../../static/img/undraw_docusaurus_tree.svg)
+![docusaurus](https://docusaurus.io/zh-CN/assets/images/slash-introducing-411a16dd05086935b8e9ddae38ae9b45.svg)
 </Zoom>

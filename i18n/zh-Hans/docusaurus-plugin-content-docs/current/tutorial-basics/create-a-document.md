@@ -34,7 +34,7 @@ description: How do I find you when I cannot solve this problem
 keywords:
   - docs
   - docusaurus
-# 要标记到文档的两个字符串字段label和permalink的字符串或对象列表
+# 要标记到文档的两个字符串字段 label 和 permalink 的字符串或对象列表
 tags: [docusaurus]
 # 将用作<head>中<meta properties="og： image"content="…"/>的封面或缩略图，增强社交媒体和消息传递平台上的链接预览
 image: https://i.imgur.com/mErPwqL.png

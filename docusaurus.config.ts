@@ -145,7 +145,8 @@ const config: Config = {
       additionalLanguages: [
         'java',
         'bash',
-        'diff'
+        'diff',
+        'json'
       ],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

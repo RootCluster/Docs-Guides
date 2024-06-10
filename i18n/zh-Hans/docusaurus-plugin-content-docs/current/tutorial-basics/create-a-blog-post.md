@@ -12,7 +12,7 @@ title: 创建 Blog
 
 ```md title="blog/2024-06-06-docs.md"
 ---
-# 文章标识（要求唯一，在 blog 目录中不重复即可）
+# 文件路径
 slug: hello-docs-guides
 # blog 文章标题
 title: Docs-Guides

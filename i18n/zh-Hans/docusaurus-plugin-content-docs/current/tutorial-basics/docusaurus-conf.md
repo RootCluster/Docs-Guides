@@ -95,8 +95,45 @@ export default {
 }
 ```
 
+## 代码片段
+
+:::info
+
+- Docusaurus: [默认支持的高亮语言](https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23)
+- Prism: [可配置支持语言](https://prismjs.com/#supported-languages)
+
+:::
+
+以下展示了 Docusaurus 默认不支持的语言配置
+
+```ts title="docusaurus.config.ts"
+const config: Config = {
+  themeConfig: {
+    prism: {
+      // highlight-start
+      additionalLanguages: [
+        'java',
+        'bash',
+        'json'
+      ],
+      // highlight-end
+    }
+  }
+}
+```
+
+> 在 3.4.0 版本，[由于 jiti 版本问题](https://github.com/facebook/docusaurus/issues/10199#issuecomment-2149368485)，添加 Docusaurus 不支持的语言，并未生效，可对 `jiti` 的版本强制指定
+>
+> ```json title="package.json"
+>   "resolutions": {
+>     "jiti": "1.21.0"
+>   },
+> ```
+
+## .md 文件图片缩放示例
+
 import Zoom from 'react-medium-image-zoom';
 
 <Zoom>
-![docusaurus](../../../../../static/img/undraw_docusaurus_tree.svg)
+![docusaurus](https://docusaurus.io/zh-CN/assets/images/slash-introducing-411a16dd05086935b8e9ddae38ae9b45.svg)
 </Zoom>
