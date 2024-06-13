@@ -86,6 +86,11 @@ yarn build
 # 如何升级
 # 需要手动选择升级的依赖包，按空格键选择，a 键切换所有，i 键反选选择
 yarn upgrade-interactive --latest
+
+# 如果你使用的 npm，那么先安装 npm-check 包
+npm install -g npm-check
+# 使用命令检查更新, a 键选择所有, i 键反选选择
+npm-check -u
 ```
 
 ## 配置调整

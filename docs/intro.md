@@ -86,6 +86,11 @@ yarn build
 # How to upgrade
 # You need to manually select the upgraded dependency package, press the space bar to select, a key to switch all, i key to reverse selection.
 yarn upgrade-interactive --latest
+
+# if use npm, npm install npm-check package
+npm install -g npm-check
+# check npm, a key to switch all, i key to reverse selection
+npm-check -u
 ```
 
 ## Config adjustment
