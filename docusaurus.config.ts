@@ -45,6 +45,8 @@ const config: Config = {
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
         language: ["en", "zh"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
         // ```
       }),
     ],
@@ -103,10 +105,10 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          type: 'search',
-          position: 'right',
-        },
+        // {
+        //   type: 'search',
+        //   position: 'right',
+        // },
         {
           type: 'docsVersionDropdown',
           position: 'right',
@@ -116,6 +118,12 @@ const config: Config = {
         {
           type: 'localeDropdown',
           position: 'right',
+        },
+        {
+          href: "https://github.com/RootCluster/Docs-Guides",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
       ],
     },
