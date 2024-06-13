@@ -19,7 +19,7 @@
     "@docusaurus/preset-classic": "3.4.0",
     "@docusaurus/remark-plugin-npm2yarn": "^3.4.0",
     "@docusaurus/theme-mermaid": "^3.4.0",
-    "@easyops-cn/docusaurus-search-local": "^0.41.0",
+    "@easyops-cn/docusaurus-search-local": "^0.44.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
@@ -47,8 +47,5 @@
   },
   "engines": {
     "node": ">=18.0"
-  },
-  "resolutions": {
-    "jiti": "1.21.0"
   }
 }

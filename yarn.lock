@@ -1692,10 +1692,10 @@
     cssesc "^3.0.0"
     immediate "^3.2.3"
 
-"@easyops-cn/docusaurus-search-local@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.npmjs.org/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.41.0.tgz#60b151e71bd8d4a24f1c61b402e4cc905a9c3f56"
-  integrity sha512-8Dj2QzoqjhOK1CCoNFk+F/ST5mjUHLgnX55W2YdQ0M+qL/GrFNxNVUpPhWMcCCBoLQk6CkhkYHUFRnv+sC9Ieg==
+"@easyops-cn/docusaurus-search-local@^0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.44.0.tgz#8f5ef8e68971223a69ecfd4956bf834319ccdeba"
+  integrity sha512-sgLpvkRtYuEGvd4peYQW2oInI4JkcQfxo7HgEnkhcxn9kxDY5laA8DiCx9qMKAkM9cMed9e8IsLk5gBeDh8Rqw==
   dependencies:
     "@docusaurus/plugin-content-docs" "^2 || ^3"
     "@docusaurus/theme-translations" "^2 || ^3"
@@ -5569,7 +5569,7 @@ jest-worker@^29.4.3:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jiti@^1.20.0:
+jiti@1.21.0, jiti@^1.20.0:
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.21.0.tgz#7c97f8fe045724e136a397f7340475244156105d"
   integrity sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==
