@@ -65,10 +65,12 @@ const config: Config = {
           remarkPlugins: [
             [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
           ],
+          showLastUpdateTime: true,
         },
         blog: {
           // https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-blog
           showReadingTime: true,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: "./src/css/custom.css",
