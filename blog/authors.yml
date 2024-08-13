@@ -3,3 +3,9 @@ xu:
   title: Developer
   url: https://incoder.org
   image_url: https://avatars.githubusercontent.com/u/12027865?v=4
+  # the description will be displayed on the author's page
+  description: 'A freelance developer...'
+  page: true
+  socials:
+    x: _incoder
+    github: BladeCode

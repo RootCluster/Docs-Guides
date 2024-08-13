@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Docs-Guides",
-  tagline: "Docs Demo",
+  title: "Book",
+  tagline: "Book Demo",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -35,22 +35,6 @@ const config: Config = {
 
   themes: [
     "@docusaurus/theme-mermaid",
-    // ... Your other themes.
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      {
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        language: ["en", "zh"],
-        highlightSearchTermsOnTargetPage: true,
-        explicitSearchResultPath: true,
-        // ```
-      },
-    ],
   ],
 
   presets: [
@@ -60,8 +44,8 @@ const config: Config = {
         docs: {
           // https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-docs
           sidebarPath: "./sidebars.ts",
-          // path: "docs",
-          // routeBasePath: "/",
+          path: "docs",
+          routeBasePath: "/",
           remarkPlugins: [
             [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
           ],
@@ -97,10 +81,15 @@ const config: Config = {
         autoCollapseCategories: true,
       },
     },
+    blog: {
+      sidebar: {
+        groupByYear: true,
+      },
+    },
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Docs Guides",
+      title: "Book",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
@@ -108,22 +97,22 @@ const config: Config = {
         href: "/",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Tutorial",
+        // },
         { to: "/blog", label: "Blog", position: "left" },
         // {
         //   type: 'search',
         //   position: 'right',
         // },
-        {
-          type: "docsVersionDropdown",
-          position: "right",
-          dropdownActiveClassDisabled: true,
-        },
+        // {
+        //   type: "docsVersionDropdown",
+        //   position: "right",
+        //   dropdownActiveClassDisabled: true,
+        // },
         // language change
         {
           type: "localeDropdown",
