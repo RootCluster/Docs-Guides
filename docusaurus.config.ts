@@ -97,6 +97,11 @@ const config: Config = {
         autoCollapseCategories: true,
       },
     },
+    blog: {
+      sidebar: {
+        groupByYear: true,
+      },
+    },
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
