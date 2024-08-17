@@ -1,10 +1,13 @@
 ---
 sidebar_position: 1
+title: Introduction
 ---
 
-# Introduction
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-Use [Docusaurus 3.4.0](https://github.com/facebook/docusaurus/releases/tag/v3.4.0) build a static page sample project of the document manual, and other projects can use this template for secondary modification.
+Use [Docusaurus 3.5.2](https://github.com/facebook/docusaurus/releases/tag/v3.5.2) build a static page sample project of
+the document manual, and other projects can use this template for secondary modification.
 
 ## Demand
 
@@ -73,8 +76,6 @@ git clone https://github.com/RootCluster/Docs-Guides.git
 # install dependency
 cd docs-guides && yarn install
 
-# Adjust the configuration as needed (see next section)
-
 # Local preview, default en
 yarn start
 # Specify language preview
@@ -95,15 +96,28 @@ npm-check -u
 
 ## Config adjustment
 
-Can refer to [Docusaurus config](tutorial-basics/docusaurus-conf.md)
+Can refer to [Docusaurus config](tutorial-basics/conf/docs-conf)
+
+## Style
+
+<Tabs>
+  <TabItem value="docs" label="Docs" default>
+    Docusaurus classic style, has home page
+    ![docs](/img/docs-style.png)
+  </TabItem>
+  <TabItem value="book" label="Book">
+    Remove home page
+  </TabItem>
+</Tabs>
 
 ## Integrated functions
 
 - [x] Simple example: Multilingual
 - [x] Plugin integration
-  - [x] Picture preview: react-medium-image-zoom
-  - [x] Local search: docusaurus-search-local
-  - [x] Mermaid support: theme-mermaid
+    - [x] Picture preview: [react-medium-image-zoom](https://github.com/mvasin/react-medium-image-zoom)
+    - [x] Local search: [docusaurus-search-local](https://github.com/cmfcmf/docusaurus-search-local/issues/205)
+    - [x] Mermaid support: [theme-mermaid](https://docusaurus.io/docs/api/themes/@docusaurus/theme-mermaid)
+- [x] Comment: [giscus](https://github.com/giscus/giscus)
 - [ ] Multiple versions
 - [ ] Packaging Script Enhancement
 - [ ] Offline PDF generation
@@ -111,7 +125,7 @@ Can refer to [Docusaurus config](tutorial-basics/docusaurus-conf.md)
 ## Other
 
 - Search function
-  - Temporary use [docusaurus-search-local](https://github.com/easyops-cn/docusaurus-search-local)
-  - Await [issues-205](https://github.com/cmfcmf/docusaurus-search-local/issues/205)
+    - Temporary use [docusaurus-search-local](https://github.com/easyops-cn/docusaurus-search-local)
+    - Await [issues-205](https://github.com/cmfcmf/docusaurus-search-local/issues/205)
 - Offline PDF
-  - [docusaurus-prince-pdf](https://github.com/signcl/docusaurus-prince-pdf)
+    - [docusaurus-prince-pdf](https://github.com/signcl/docusaurus-prince-pdf)

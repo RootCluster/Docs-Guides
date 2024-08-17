@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Giscus Comment
+title: Giscus 评论
 ---
 
 ## 添加依赖

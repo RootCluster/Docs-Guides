@@ -52,12 +52,10 @@ docs-guides
 ```bash
 # clone 项目
 git clone https://github.com/RootCluster/Docs-Guides.git
-# 
-cd docs-guides
 # 安装依赖
-yarn install
+cd docs-guides && yarn install
 
-# 按需调整配置（查看下一节）
+# 按需调整配置
 
 # 本地预览, 默认英文
 yarn start

@@ -4,8 +4,10 @@ title: Create a Blog
 ---
 
 :::info
+
 Create blog path(eg: 2024-06-06-docs.md): `blog/2024-06-06-docs.md`
 > blog relevant articles must be placed under the `blog` directory.
+
 :::
 
 ## General config

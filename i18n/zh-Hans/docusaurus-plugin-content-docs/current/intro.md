@@ -4,7 +4,15 @@ sidebar_position: 1
 
 # 项目介绍
 
-使用 [Docusaurus 3.4.0](https://github.com/facebook/docusaurus/releases/tag/v3.4.0) 构建的文档手册静态页面示例项目，其他项目可使用该模板进行二次修改使用.
+使用 [Docusaurus 3.5.2](https://github.com/facebook/docusaurus/releases/tag/v3.5.2) 构建的文档手册静态页面示例项目，其他项目可使用该模板进行二次修改使用.
+
+## 项目分支
+
+```text title="项目分支"
+Docs-Guides/
+  ├── main                          # 文档 Style
+  └── book                          # 书本 Style
+```
 
 ## 要求
 
@@ -13,8 +21,8 @@ sidebar_position: 1
 
 ## 项目结构
 
-```text title="高亮部分是多版本管理部分"
-docs-guides
+```text {18-20,34-37,44} showLineNumbers title="高亮部分是多版本管理部分"
+Docs-Guides/
   ├── blog                          # 博客文章目录
   │   └── 2020-05-30-hola.md
   ├── docs                          # 文档目录
@@ -24,21 +32,20 @@ docs-guides
   │   └── mdx.md
   ├── i18n
   │   └── zh-Hans                   # 简体中文翻译位置
-  │       ├── docusaurus-plugin-content-docs
-  │       │   ├── current
-  │       │   │   ├── ...           # 要与 docs 目录结构相同的文件翻译
-  │       │   │   └── doc1.md
-// highlight-start
-  │       │   ├── version-1.0
-  │       │   │   ├── ...           # 要与 docs 目录结构相同的文件翻译
-  │       │   │   └── doc1.md
-// highlight-end
-  │       │   └── current.json      # 侧边栏
-  │       ├── docusaurus-theme-classic
-  │       │   └── navbar.json       # 导航栏
-  │       ├── docusaurus-plugin-content-blog
-  │       │   ├── ...               # 要与 blog 目录结构相同的文件翻译
+  │       ├── docusaurus-plugin-content-blog  # 项目根目录 blog（结构相同） 对应翻译
+  │       │   ├── ...
   │       │   └── doc1.md
+  │       ├── docusaurus-plugin-content-docs  # 项目根目录 docs（结构相同） 对应翻译
+  │       │   ├── current           # 项目根目录 docs 最新版本
+  │       │   │   ├── ...
+  │       │   │   └── doc1.md
+  │       │   ├── version-1.0       # 项目根目录 docs 历史版本
+  │       │   │   ├── ...
+  │       │   │   └── doc1.md
+  │       │   └── current.json      # 多示例版本号
+  │       ├── docusaurus-plugin-theme-classic
+  │       │   │── footer.json       # 页脚
+  │       │   └── navbar.json       # 导航栏
   │       └── code.json             # 定义了 React 代码中使用的所有文本标签
   ├── src                           # 页面或自定义的 React 组件目录
   │   ├── css
@@ -46,24 +53,31 @@ docs-guides
   │   └── pages
   │       ├── styles.module.css
   │       └── index.js
-  ├── static                        # 静态文件目录
+  ├── static                        # 静态文件目录（可以放一些和版本无关的静态文件）
   │   └── img
-// highlight-start
-  ├── versioned_docs                           # 页面或自定义的 React 组件目录
+  ├── versioned_docs                # 多版本实例
   │   └── version-1.0/
-  ├── versioned_sidebars                           # 页面或自定义的 React 组件目录
+  ├── versioned_sidebars            # 多版本实例侧边栏
   │   └── version-1.0-sidebars.json
-// highlight-end
   ├── babel.config.js
-  ├── docusaurus.config.ts          # 配置文件目录
+  ├── docusaurus.config.ts          # 项目配置（核心配置）
   ├── package.json                  # 项目依赖管理
   ├── README.md                     # 项目解释 README
   ├── sidebars.ts                   # 文档侧边栏配置文件
   ├── tsconfig.json
-// highlight-start
   └── versions.json
-// highlight-end
 ```
+
+## 额外集成
+
+- [x] 简单示例：多语言
+- [x] 插件集成
+  - [x] 图片预览：react-medium-image-zoom
+  - [x] 本地搜索：docusaurus-search-local
+  - [x] 图表支持：theme-mermaid
+- [ ] 多版本
+- [ ] 打包脚本增强
+- [ ] 离线 PDF 生成
 
 ## 相关操作
 
@@ -93,20 +107,9 @@ npm install -g npm-check
 npm-check -u
 ```
 
-## 配置调整
+## 快速使用
 
-可参考 [相关配置](tutorial-basics/docusaurus-conf.md) 文章
 
-## 集成功能
-
-- [x] 简单示例：多语言
-- [x] 插件集成
-  - [x] 图片预览：react-medium-image-zoom
-  - [x] 本地搜索：docusaurus-search-local
-  - [x] 图表支持：theme-mermaid
-- [ ] 多版本
-- [ ] 打包脚本增强
-- [ ] 离线 PDF 生成
 
 ## 其他
 

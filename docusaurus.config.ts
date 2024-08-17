@@ -124,11 +124,11 @@ const config: Config = {
         //   type: 'search',
         //   position: 'right',
         // },
-        {
-          type: "docsVersionDropdown",
-          position: "right",
-          dropdownActiveClassDisabled: true,
-        },
+        // {
+        //   type: "docsVersionDropdown",
+        //   position: "right",
+        //   dropdownActiveClassDisabled: true,
+        // },
         // language change
         {
           type: "localeDropdown",
