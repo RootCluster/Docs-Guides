@@ -93,7 +93,7 @@ const config: Config = {
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
-        srcDark: "img/logo.svg",
+        srcDark: "img/logo_dark.svg",
         href: "/",
       },
       items: [

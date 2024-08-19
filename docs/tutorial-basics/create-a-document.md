@@ -4,11 +4,13 @@ title: Create a Docs
 ---
 
 :::info
-创建 docs 文章路径(如:这里的 create-a-document.md): `docs/create-a-document.md`
-> docs 相关文章必须放在 `docs` 目录下
+
+Create docs path(eg: 2024-06-06-docs.md): `docs/create-a-document.md`
+> docs relevant articles must be placed under the docs directory.
+
 :::
 
-## 文档头信息
+## Docs Header
 
 ```md
 ---

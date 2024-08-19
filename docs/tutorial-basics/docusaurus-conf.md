@@ -12,11 +12,11 @@ const config: Config = {
   // 网站 ico 图标
   favicon: 'img/favicon.ico',
   // 项目的最终访问地址
-  url: ''
+  url: '',
   // 项目子路径，按需配置
   // 如果不存在子目录，这里配置为 '/'，因此最终访问地址为 https://domain-name
   // 本项目示例子目录 'guide/'，因此最终访问地址为 https://domain-name/guide/
-  baseUrl: 'guide/'
+  baseUrl: 'guide/',
   themeConfig: {
       navbar: {
         // 左上角导航名字
@@ -25,15 +25,15 @@ const config: Config = {
           // logo 描述
           alt: 'My Site Logo',
           // 默认主题 logo
-          src: 'img/logo.svg',
+          src: 'img/logo_dark.svg',
           // dark 主题 logo
-          srcDark: 'img/logo.svg',
+          srcDark: 'img/logo_dark.svg',
           // 指定开始页（定位到 docs 目录下的 intro 文件）
           // 如果指定 logo 跳转到指定 docs 目录(没有主页，很适合作为文档风格)，则配置 '/docs/intro'，
           // 默认是该网站的首页 '/'
           href: '/'
         },
-        ....
+        ...
       }
   }
 }

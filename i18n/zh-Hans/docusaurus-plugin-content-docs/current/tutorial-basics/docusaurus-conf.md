@@ -25,9 +25,9 @@ const config: Config = {
           // logo 描述
           alt: 'My Site Logo',
           // 默认主题 logo
-          src: 'img/logo.svg',
+          src: 'img/logo_dark.svg',
           // dark 主题 logo
-          srcDark: 'img/logo.svg',
+          srcDark: 'img/logo_dark.svg',
           // 指定开始页（定位到 docs 目录下的 intro 文件）
           // 如果指定 logo 跳转到指定 docs 目录(没有主页，很适合作为文档风格)，则配置 '/docs/intro'，
           // 默认是该网站的首页 '/'
