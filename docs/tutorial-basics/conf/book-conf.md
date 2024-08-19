@@ -8,7 +8,7 @@ import Zoom from 'react-medium-image-zoom';
 The Book Style mentioned here refers to a website that does <font color="red">**not have a Home page**</font>. This style is very suitable for the output of pure technical content. It is a replacement of [hugo-book](https://hugo-book-demo.netlify.app).
 
 <Zoom>
-![docs-style](/img/docs-style.png)
+![docs-style](/img/book-style.png)
 </Zoom>
 
 ## docusaurus config

@@ -8,7 +8,7 @@ import Zoom from 'react-medium-image-zoom';
 这里所说的 书本 Style，指的<font color="red">**不具有 Home 页**</font>，这种风格很适合作为纯技术内容输出的网站，是 [hugo-book](https://hugo-book-demo.netlify.app) 的平替
 
 <Zoom>
-![docs-style](/img/docs-style.png)
+![docs-style](/img/book-style.png)
 </Zoom>
 
 ## docusaurus 配置
